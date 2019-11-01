@@ -1,2 +1,2 @@
-# alghub
+
 algorithm hub
