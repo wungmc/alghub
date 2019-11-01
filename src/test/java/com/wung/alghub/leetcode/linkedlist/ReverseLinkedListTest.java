@@ -1,8 +1,10 @@
 /*
  * Copyright (C), 2011-2019.
  */
-package com.wung.alghub.leetcode;
+package com.wung.alghub.leetcode.linkedlist;
 
+import com.wung.alghub.leetcode.linkedlist.Node;
+import com.wung.alghub.leetcode.linkedlist.ReverseLinkedList;
 import org.junit.Test;
 
 /**

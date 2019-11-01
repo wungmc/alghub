@@ -1,7 +1,7 @@
 /*
  * Copyright (C), 2011-2019.
  */
-package com.wung.alghub.leetcode;
+package com.wung.alghub.leetcode.linkedlist;
 
 /**
  * 反转单向链表。

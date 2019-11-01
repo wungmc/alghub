@@ -7,7 +7,7 @@
 
 # Intellij
 out/
-
+target
 *.iml
 
 /.idea/
