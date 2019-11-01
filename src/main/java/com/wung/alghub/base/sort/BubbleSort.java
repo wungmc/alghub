@@ -28,6 +28,10 @@ import java.util.Arrays;
 public class BubbleSort {
 
     public static void sort(int[] arr) {
+    	if (arr == null || arr.length == 1) {
+    		return;
+		}
+    	
         int temp;
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
@@ -40,11 +44,5 @@ public class BubbleSort {
             System.out.println(Arrays.toString(arr));
         }
     }
-
-    public static void main(String[] args) {
-        int[] arr = {5, 1, 4, 2, 8};
-        System.out.println("before sort:" + Arrays.toString(arr));
-        BubbleSort.sort(arr);
-        System.out.println("after sort:" + Arrays.toString(arr));
-    }
+    
 }
