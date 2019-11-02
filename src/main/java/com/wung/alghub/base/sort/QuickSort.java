@@ -1,18 +1,20 @@
 package com.wung.alghub.base.sort;
 
-import java.util.Arrays;
-
 /**
  * 快速排序
  *
  * 原理：
- * 通过一趟扫描将要排序的数据分割成独立的两部分,
- * 其中一部分的所有数据都比另外一部分的所有数据都要小,
- * 然后再按此方法对这两部分数据分别进行快速排序,
- * 整个排序过程可以递归进行,以此达到整个数据变成有序序列
+ * 基于分治的思想，是冒泡排序的改进型。
+ * 首先在数组中选择一个基准点（该基准点的选取可能影响快速排序的效率，后面讲解选取的方法），
+ * 然后分别从数组的两端扫描数组，设两个指示标志（lo指向起始位置，hi指向末尾)，
+ * 首先从后半部分开始，如果发现有元素比该基准点的值小，就交换lo和hi位置的值，
+ * 然后从前半部分开始扫秒，发现有元素大于基准点的值，就交换lo和hi位置的值，
+ * 如此往复循环，直到lo>=hi,然后把基准点的值放到hi这个位置。一次排序就完成了。
+ * 以后采用递归的方式分别对前半部分和后半部分排序，当前半部分和后半部分均有序时该数组就自然有序了。
  *
  * http://www.cnblogs.com/kkun/archive/2011/11/23/2260270.html
  * http://bubkoo.com/2014/01/12/sort-algorithm/quick-sort/
+ * https://www.jianshu.com/p/e4369c66d4a5
  *
  * Created by wung on 2017/2/25.
  */
@@ -34,22 +36,17 @@ public class QuickSort {
         arr[low] = pivot;
         return low;
     }
-
-    public static void sort(int[] arr, int low, int high) {
-        if (arr.length <= 1) {
-            return;
-        }
-
-        if (low < high) {
-            int loc = partition(arr, low, high);
-            sort(arr, low, loc - 1);
-            sort(arr, loc + 1, high);
-        }
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {6, 2, 4, 1, 5, 9};
-        QuickSort.sort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.toString(arr));
-    }
+    
+	public static void sort(int[] arr, int low, int high) {
+		if (arr.length <= 1) {
+			return;
+		}
+		
+		if (low < high) {
+			int loc = partition(arr, low, high);
+			sort(arr, low, loc - 1);
+			sort(arr, loc + 1, high);
+		}
+	}
+	
 }
