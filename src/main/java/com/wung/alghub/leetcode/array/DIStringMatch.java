@@ -37,13 +37,13 @@ public class DIStringMatch {
 	
 	public static void main(String[] args) {
 		int[] arr1 = diStringMatch("IDID");
-		assert Arrays.toString(arr1).equals("[0,4,1,3,2]");
+		System.out.println(Arrays.toString(arr1));
 		
 		int[] arr2 = diStringMatch("III");
-		assert Arrays.toString(arr2).equals("[0,1,2,3]");
+		System.out.println(Arrays.toString(arr2));
 		
 		int[] arr3 = diStringMatch("DDI");
-		assert Arrays.toString(arr3).equals("[3,2,0,1]");
+		System.out.println(Arrays.toString(arr3));
 		
 	}
 	
@@ -65,6 +65,7 @@ public class DIStringMatch {
 				arr[i] = high--;
 			}
 		}
+		arr[N] = low;
 		return arr;
 	}
 }
