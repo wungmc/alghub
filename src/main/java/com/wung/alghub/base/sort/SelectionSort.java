@@ -31,9 +31,20 @@ public class SelectionSort {
 			
 			// 交换位置，将最小值放到最左边
 			if (i != k) {
+				// 交换方法1
 				int temp = a[i];
 				a[i] = a[k];
 				a[k] = temp;
+				
+				// 交换方法2
+				// arr[i] = arr[i] ^ arr[k];
+				// arr[k] = arr[i] ^ arr[k];
+				// arr[i] = arr[i] ^ arr[k];
+				
+				// 交换方法2
+				// arr[i] = arr[i] - arr[k];
+				// arr[k] = arr[i] + arr[k];
+				// arr[i] = arr[k] - arr[i];
 			}
 		}
 	}

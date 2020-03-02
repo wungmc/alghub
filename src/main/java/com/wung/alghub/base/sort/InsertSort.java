@@ -24,7 +24,7 @@ public class InsertSort {
 			int temp = a[i];
 			
 			// 寻找 temp 插入有序列表的正确位置
-			// 相当于从后向前遍历有序表，如果有虚表的当前数大于 temp，则将该数忘后移动一个位置，给 temp 腾位置
+			// 相当于从后向前遍历有序表，如果有序表的当前数大于 temp，则将该数忘后移动一个位置，给 temp 腾位置
 			int j = i - 1;
 			for (; j >= 0 && a[j] > temp; j--) {
 				// 元素后移，为插入temp做准备
